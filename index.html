@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário de Candidatura</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulário de Candidatura</h1>
+    <p>Por favor, preencha este formulário com as informações necessárias</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label for="first-name">Digite Seu Nome:<input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Digite seu Sobrenome: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Digite Seu Endereço de E-mail: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Crie uma Nova Senha: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Setor de Interesse: (Obrigatório)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Tecnologia</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Marketing</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Faça o Upload do Seu Currículo: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Digite Seus Anos de Experiência: <input id="age" type="number" name="age" min="1" max="50" /></label>
+        <label for="referrer">Como você soube sobre esta oportunidade de trabalho?
+          <select id="referrer" name="referrer">
+            <option value="">(selecionar um)</option>
+            <option value="1">Linkedin</option>
+            <option value="2">Indeed</option>
+            <option value="3">Glassdoor</option>
+            <option value="4">Outro</option>
+          </select>
+        </label>
+        <label for="bio">Forneça uma Carta de Apresentação:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Estou confiante de que minhas habilidades podem..."></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> Aceito os <a href="#">termos e condições</a>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
